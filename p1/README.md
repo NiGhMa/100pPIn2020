@@ -22,10 +22,11 @@ After some questions, the tool will do the following:
   - [x] What affixes do you want to add?
   - [x] (if affix from tutorial) Which unicorn do you want to add?
   - [x] What the plan?
-- [ ] Create project directory
+- [x] Create project directory
 - [x] Retrieve last project number state file
-- [ ] Update state file
 - [x] Create template for README
+- [x] Make README and save it
+- [ ] Update state file
 - [ ] Add project reference in main README
 - [ ] Start a new git branch
 - [ ] Commit first files

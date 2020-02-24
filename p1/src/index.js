@@ -28,21 +28,29 @@ inquirer.prompt(services.ask(newProjectCode)).then(answers => {
   console.log(JSON.stringify(answers));
 
   if (!fs.existsSync(newProjectPath)) {
-    mkdirp(newProjectPath);
+    //mkdirp(newProjectPath);
+    fs.mkdirSync(newProjectPath, { recursive: true });
 
     var readmeFile = fs.readFileSync(
       path.join(__dirname, "../res/README.tpl"),
       "utf8"
     );
+
     // create README.md
     readmeFile = readmeFile
       .replace("{TITLE}", answers.title)
       .replace("{CODE}", newProjectCode)
       .replace("{LONG_DESCRIPTION}", answers.description)
       .replace("{PLAN}", answers.plan)
-      .replace("{UNICRONS}", writeUnicrons(answers.unicorns));
+      .replace("{UNICORNS}", writeUnicrons(answers.unicorns));
 
-    fs.writeFileSync(newProjectPath + "README.md", readmeFile);
+    const filepath = newProjectPath + "README.md";
+    const fd = fs.openSync(filepath, "w+");
+    fs.writeFileSync(filepath, readmeFile, {
+      encoding: "utf8",
+      mode: "777"
+    });
+    fs.closeSync(fd);
 
     // update state.json
     // write state.json
