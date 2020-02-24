@@ -10,6 +10,7 @@
   "author": "NiGhMa <nighma@gmail.com> (http://github.com/NiGhMa)",
   "license": "MIT",
   "dependencies": {
-    "inquirer": "^7.0.4"
+    "inquirer": "^7.0.4",
+    "mkdirp": "^1.0.3"
   }
 }

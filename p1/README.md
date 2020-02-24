@@ -2,15 +2,34 @@
 
 This is a simple interactive CLI example made with NodeJS and Inquirer.
 In this example I created it to init my project folder.
-The command will create the following:
+After some questions, the tool will do the following:
 
-1. the project directory
-2. the README.md file from a template (like this one)
-3. the reference line in the main README.md file
+1. creates the project directory with the next number
+2. creates the README file from a template (like this one)
+3. adds the reference line in the main README file
+4. creates a new git branch
+5. commits first files
+6. opens VSCode and open the README file for change
 
-## Plan (to complete)
+## Plan
 
-- [ ] Create a new NodeJS project
+- [x] Create a new NodeJS project
+- [x] Install Inquirer
+- [x] Create questions
+  - [x] Do you want to create the next project?
+  - [x] What's the title?
+  - [x] What's the description?
+  - [x] What affixes do you want to add?
+  - [x] (if affix from tutorial) Which unicorn do you want to add?
+  - [x] What the plan?
+- [ ] Create project directory
+- [x] Retrieve last project number state file
+- [ ] Update state file
+- [x] Create template for README
+- [ ] Add project reference in main README
+- [ ] Start a new git branch
+- [ ] Commit first files
+- [ ] Start VSCode in the project directory and open README for change
 
 ## What I've learned
 
