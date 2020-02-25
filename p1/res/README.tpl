@@ -10,6 +10,8 @@
 
 ✔ ...
 
-## Unicrons (references)
+## Unicorns
+
+Thanks to them for the inspiration and references!
 
 {UNICORNS}

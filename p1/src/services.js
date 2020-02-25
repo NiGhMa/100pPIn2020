@@ -15,7 +15,12 @@ function ask(code) {
       name: "go",
       message: "Do you want to create the next project {" + code + "}?",
       default: false
-    },
+    }
+  ];
+}
+
+function askDetails() {
+  return [
     {
       type: "input",
       name: "title",
@@ -87,5 +92,6 @@ function ask(code) {
 
 module.exports = {
   ask,
+  askDetails,
   affixesCode
 };

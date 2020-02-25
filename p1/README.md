@@ -26,13 +26,13 @@ After some questions, the tool will do the following:
 - [x] Retrieve last project number state file
 - [x] Create template for README
 - [x] Make README and save it
-- [ ] Update state file
+- [x] Update state file
 - [ ] Add project reference in main README
 - [ ] Start a new git branch
 - [ ] Commit first files
 - [ ] Start VSCode in the project directory and open README for change
 
-## What I've learned
+## What I've learned so far
 
 ✔ Configure init value for NPM
 
@@ -40,6 +40,10 @@ After some questions, the tool will do the following:
 
 ✔ Markdown syntax and conventions
 
-## Unicrons (references)
+✔ Manipulate local files with NodeJS
+
+## Unicorns
+
+Thanks to them for the inspiration and references!
 
 🦄 [Coding Garden with CJ](https://github.com/CodingGarden)
