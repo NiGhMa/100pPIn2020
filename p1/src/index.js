@@ -1,7 +1,11 @@
 // ES5 is used for this project
 const inquirer = require("inquirer");
 const fs = require("fs");
-var path = require("path");
+const path = require("path");
+const GitCommandLine = require("git-command-line");
+
+const UTF8 = "utf8";
+const GIT_BRANCH_MAIN = "master";
 
 const state = require("../res/state.json");
 const services = require("./services");
@@ -26,15 +30,15 @@ inquirer.prompt(services.ask(newProjectCode)).then(answers => {
 
 function doTheJob() {
   inquirer.prompt(services.askDetails()).then(answers => {
-    //console.log(JSON.stringify(answers));
-
     // create directory
+    console.log("Creating directory...");
     fs.mkdirSync(newProjectPath, { recursive: true });
 
     // get README Template
+    console.log("Initializing README file...");
     var readmeFile = fs.readFileSync(
       path.join(__dirname, "../res/README.tpl"),
-      "utf8"
+      UTF8
     );
 
     // create README based on template
@@ -49,6 +53,7 @@ function doTheJob() {
     writeFile(newProjectPath + "README.md", readmeFile);
 
     // update state.json
+    console.log("Updating repository state...");
     var newState = state;
     newState.lastProjectNumber = newProjectNumber;
     newState.projects.push({
@@ -65,10 +70,37 @@ function doTheJob() {
     );
 
     // add reference in main README
-    // create branch
-    // add file into branch
-    // commit first files
-    // start VSCode in the project directory and open README.md
+    console.log("Adding project reference in maini README...");
+    var affixes = "";
+    answers.affixes.forEach(affixe => {
+      affixes += services.affixesCode[affixe];
+    });
+
+    var ref =
+      "| " +
+      "[" +
+      newProjectCode +
+      "](./" +
+      newProjectCode +
+      "/README.md)" +
+      " | " +
+      affixes +
+      " | " +
+      answers.title +
+      " |\n";
+
+    fs.appendFileSync(state.rootDirectory + "/README.md", ref, {
+      encoding: "utf8"
+    });
+
+    // Init Git branch
+    console.log("Creating git branch...");
+    initGitBranch(state.rootDirectory, GIT_BRANCH_MAIN, newProjectCode);
+
+    // Start VSCode in the project directory and open README.md
+    console.log("Starting VS Code...");
+
+    console.log("Done!");
   });
 }
 
@@ -88,8 +120,19 @@ function writeUnicrons(unicorns) {
 function writeFile(path, content) {
   var fd = fs.openSync(path, "w+");
   fs.writeFileSync(path, content, {
-    encoding: "utf8",
+    encoding: UTF8,
     mode: "777"
   });
   fs.closeSync(fd);
+}
+
+function initGitBranch(dir, mainBranch, projectName) {
+  var git = new GitCommandLine(dir);
+  git
+    .checkout(mainBranch)
+    .then(res => git.checkout(projectName))
+    .then(res => git.add("*"))
+    .then(res => git.commit('-am "Init ' + projectName + ' project"'))
+    .then(res => console.log("Success: ", res))
+    .fail(err => console.log("Error:", err));
 }

@@ -2,10 +2,10 @@ const unicornsRegExp = /(\[[^|]+\]\([^|]+\))/gi;
 const planRegExp = /(- \[ \] )/gi;
 
 const affixesCode = {
-  Inspired: "INSPIRED",
-  Tool: "TOOL",
-  LessThan2Hours: "LT2",
-  Wip: "WIP"
+  Inspired: "📺",
+  Tool: "🛠",
+  LessThan2Hours: "⏳",
+  Wip: "👷‍♂️"
 };
 
 function ask(code) {

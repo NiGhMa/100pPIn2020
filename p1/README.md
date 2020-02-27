@@ -1,7 +1,7 @@
 # An interactive CLI made with NodeJS and Inquirer (p1)
 
 This is a simple interactive CLI example made with NodeJS and Inquirer.
-In this example I created it to init my project folder.
+In this example I created it to init my project directory.
 After some questions, the tool will do the following:
 
 1. creates the project directory with the next number
@@ -27,10 +27,15 @@ After some questions, the tool will do the following:
 - [x] Create template for README
 - [x] Make README and save it
 - [x] Update state file
-- [ ] Add project reference in main README
+- [x] Add project's reference in main README
 - [ ] Start a new git branch
 - [ ] Commit first files
 - [ ] Start VSCode in the project directory and open README for change
+- [x] Add a shell script in the main root direectory
+
+## Improvements
+
+- [ ] Add tags for project representing languages, frameworks, generators, ...
 
 ## What I've learned so far
 
@@ -41,6 +46,8 @@ After some questions, the tool will do the following:
 ✔ Markdown syntax and conventions
 
 ✔ Manipulate local files with NodeJS
+
+✔ Using git-command-line NPM package
 
 ## Unicorns
 

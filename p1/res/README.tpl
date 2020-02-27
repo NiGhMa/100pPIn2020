@@ -6,6 +6,10 @@
 
 {PLAN}
 
+## Improvements
+
+_No idea yet but that will come for sure_
+
 ## What I've learned so far
 
 ✔ ...

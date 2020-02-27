@@ -6,9 +6,9 @@ Here the projects list, each project has its own README file you can reach them 
 
 ## Legends
 
-🛠 Useful tools;
-📺 inspired from tutorial;
-⏳ Made within 2 hours;
+🛠 Useful tools -
+📺 inspired from tutorial -
+⏳ Made within 2 hours -
 👷‍♂️ Work In Progress
 
 ## Projects
