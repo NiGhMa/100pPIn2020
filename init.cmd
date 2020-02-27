@@ -1,2 +1,2 @@
 @echo off
-node .\p1\src\inidex.js
+node .\p1\src\index.js
