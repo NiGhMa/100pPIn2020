@@ -6,14 +6,14 @@ Here the projects list, each project has its own README file you can reach them 
 
 ## Legends
 
-🛠 Useful tools;
-📺 inspired from tutorial;
-⏳ Made within 2 hours;
+🛠 Useful tools -
+📺 inspired from tutorial -
+⏳ Made within 2 hours -
 👷‍♂️ Work In Progress
 
 ## Projects
 
 |         Name         | Affixes | Description                                      |
 | :------------------: | :-----: | :----------------------------------------------- |
-| [p1](./p1) |  👷‍♂️📺   | An interactive CLI made with NodeJS and Inquirer |
-| [p2](./p2) |    🛠    | PowerShell tools for lazy creators               |
+| [p1](./p1/README.md) |  👷‍♂️📺   | An interactive CLI made with NodeJS and Inquirer |
+| [p2](./p2/README.md) |    🛠    | PowerShell tools for lazy creators               |

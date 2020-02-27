@@ -1,0 +1,18 @@
+{
+  "lastProjectNumber": 2,
+  "rootDirectory": "C:\\dev\\projects\\100PIn2020",
+  "projects": [
+    {
+      "code": "p1",
+      "number": 1,
+      "description": "An interactive CLI made with NodeJS and Inquirer",
+      "createdOn": "2020-02-21T05:00:00.000Z"
+    },
+    {
+      "code": "p2",
+      "number": 2,
+      "description": "PowerShell tools for lazy creators",
+      "createdOn": "2020-02-23T05:00:00.000Z"
+    }
+  ]
+}
