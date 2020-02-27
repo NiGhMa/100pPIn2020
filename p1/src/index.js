@@ -30,6 +30,10 @@ inquirer.prompt(services.ask(newProjectCode)).then(answers => {
 
 function doTheJob() {
   inquirer.prompt(services.askDetails()).then(answers => {
+    // Init Git branch
+    console.log("Creating git branch...");
+    initGitBranch(state.rootDirectory, GIT_BRANCH_MAIN, newProjectCode);
+
     // create directory
     console.log("Creating directory...");
     fs.mkdirSync(newProjectPath, { recursive: true });
@@ -92,10 +96,6 @@ function doTheJob() {
     fs.appendFileSync(state.rootDirectory + "/README.md", ref, {
       encoding: "utf8"
     });
-
-    // Init Git branch
-    console.log("Creating git branch...");
-    initGitBranch(state.rootDirectory, GIT_BRANCH_MAIN, newProjectCode);
 
     // Start VSCode in the project directory and open README.md
     console.log("Starting VS Code...");
