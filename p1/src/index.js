@@ -36,8 +36,6 @@ function doTheJob() {
     git
       .checkout(GIT_BRANCH_MAIN)
       .then(res => git.checkout("-b " + newProjectCode))
-      .then(res => git.add("*"))
-      .then(res => git.commit('-am "Init ' + newProjectCode + ' project"'))
       .then(res => {
         console.log("Success: ", res);
 
@@ -110,6 +108,10 @@ function doTheJob() {
         console.log("Done!");
       })
       .fail(err => console.log("Error:", err));
+
+    git
+      .add("*")
+      .then(res => git.commit('-am "Init ' + newProjectCode + ' project"'));
   });
 }
 
