@@ -35,7 +35,7 @@ function doTheJob() {
     var git = new GitCommandLine(state.rootDirectory);
     git
       .checkout(GIT_BRANCH_MAIN)
-      .then(res => git.checkout(newProjectCode))
+      .then(res => git.checkout("-b " + newProjectCode))
       .then(res => git.add("*"))
       .then(res => git.commit('-am "Init ' + newProjectCode + ' project"'))
       .then(res => {
