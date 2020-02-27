@@ -4,17 +4,20 @@ In this project, I'll put the evolution of the useful plugins list I use and my 
 
 ## Plan
 
-- [ ] Copy my `settings.json` file
-- [ ] Add plugins I use into a list
-
+- [x] Copy my `settings.json` file
+- [x] Add plugins I use into a list
+- [x] Add TypeScript plugins and config
 
 ## Improvements
 
-_No idea yet but that will come for sure_
+- [ ] Check [eslint-config-airbnb-typescript](https://www.npmjs.com/package/eslint-config-airbnb-typescript)
+- [ ] Add Babel
 
 ## What I've learned so far
 
-✔ ...
+✔ VS code config variables ([Variables Reference](https://code.visualstudio.com/docs/editor/variables-reference))
+
+✔ How to configure TSlint
 
 ## Unicorns
 
