@@ -3,6 +3,7 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const path = require("path");
 const GitCommandLine = require("git-command-line");
+const exec = require("child_process").exec;
 
 const UTF8 = "utf8";
 const GIT_BRANCH_MAIN = "master";
@@ -12,7 +13,10 @@ const services = require("./services");
 
 const newProjectNumber = state.lastProjectNumber + 1;
 const newProjectCode = "p" + newProjectNumber;
-const newProjectPath = path.join(state.rootDirectory, newProjectCode + "/");
+const newProjectPath = path.join(
+  state.rootDirectory,
+  "/" + newProjectCode + "/"
+);
 
 inquirer.prompt(services.ask(newProjectCode)).then(answers => {
   if (answers.go) {
@@ -36,7 +40,7 @@ function doTheJob() {
 
     git
       .checkout(GIT_BRANCH_MAIN)
-      .then(res => git.checkout("-b " + newProjectCode))
+      .then(() => git.checkout("-b " + newProjectCode))
       .then(res => {
         console.log("Success: ", res);
 
@@ -80,7 +84,7 @@ function doTheJob() {
         );
 
         // add reference in main README
-        console.log("Adding project reference in maini README...");
+        console.log("Adding project reference in main README...");
         var affixes = "";
         answers.affixes.forEach(affixe => {
           affixes += services.affixesCode[affixe];
@@ -108,8 +112,15 @@ function doTheJob() {
 
         console.log("Done!");
       })
-      .then(res => git.add("*"))
-      .then(res => git.commit('-am "Init ' + newProjectCode + ' project"'))
+      .then(() => git.add("*"))
+      .then(() => git.commit('-am "Init ' + newProjectCode + ' project"'))
+      .then(() => exec("cd " + newProjectPath))
+      .then(() => exec("code . README.md"))
+      .then(() =>
+        console.log(
+          "\n*** Please push the project to the repo and create a pull request to update the project state.json ***\nhttps://github.com/NiGhMa/100PIn2020"
+        )
+      )
       .fail(err => console.log("Error:", err));
   });
 }
