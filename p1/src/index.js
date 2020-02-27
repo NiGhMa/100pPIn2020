@@ -32,13 +32,12 @@ function doTheJob() {
   inquirer.prompt(services.askDetails()).then(answers => {
     // Init Git branch
     console.log("Creating git branch...");
-    //var gitResult = initGitBranch(state.rootDirectory, GIT_BRANCH_MAIN, newProjectCode);
-    var git = new GitCommandLine(dir);
+    var git = new GitCommandLine(state.rootDirectory);
     git
-      .checkout(mainBranch)
-      .then(res => git.checkout(projectName))
+      .checkout(GIT_BRANCH_MAIN)
+      .then(res => git.checkout(newProjectCode))
       .then(res => git.add("*"))
-      .then(res => git.commit('-am "Init ' + projectName + ' project"'))
+      .then(res => git.commit('-am "Init ' + newProjectCode + ' project"'))
       .then(res => {
         console.log("Success: ", res);
 
