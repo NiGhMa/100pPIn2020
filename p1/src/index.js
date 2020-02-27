@@ -32,75 +32,85 @@ function doTheJob() {
   inquirer.prompt(services.askDetails()).then(answers => {
     // Init Git branch
     console.log("Creating git branch...");
-    initGitBranch(state.rootDirectory, GIT_BRANCH_MAIN, newProjectCode);
+    //var gitResult = initGitBranch(state.rootDirectory, GIT_BRANCH_MAIN, newProjectCode);
+    var git = new GitCommandLine(dir);
+    git
+      .checkout(mainBranch)
+      .then(res => git.checkout(projectName))
+      .then(res => git.add("*"))
+      .then(res => git.commit('-am "Init ' + projectName + ' project"'))
+      .then(res => {
+        console.log("Success: ", res);
 
-    // create directory
-    console.log("Creating directory...");
-    fs.mkdirSync(newProjectPath, { recursive: true });
+        // create directory
+        console.log("Creating directory...");
+        fs.mkdirSync(newProjectPath, { recursive: true });
 
-    // get README Template
-    console.log("Initializing README file...");
-    var readmeFile = fs.readFileSync(
-      path.join(__dirname, "../res/README.tpl"),
-      UTF8
-    );
+        // get README Template
+        console.log("Initializing README file...");
+        var readmeFile = fs.readFileSync(
+          path.join(__dirname, "../res/README.tpl"),
+          UTF8
+        );
 
-    // create README based on template
-    readmeFile = readmeFile
-      .replace("{TITLE}", answers.title)
-      .replace("{CODE}", newProjectCode)
-      .replace("{LONG_DESCRIPTION}", answers.description)
-      .replace("{PLAN}", answers.plan)
-      .replace("{UNICORNS}", writeUnicrons(answers.unicorns));
+        // create README based on template
+        readmeFile = readmeFile
+          .replace("{TITLE}", answers.title)
+          .replace("{CODE}", newProjectCode)
+          .replace("{LONG_DESCRIPTION}", answers.description)
+          .replace("{PLAN}", answers.plan)
+          .replace("{UNICORNS}", writeUnicrons(answers.unicorns));
 
-    // write README
-    writeFile(newProjectPath + "README.md", readmeFile);
+        // write README
+        writeFile(newProjectPath + "README.md", readmeFile);
 
-    // update state.json
-    console.log("Updating repository state...");
-    var newState = state;
-    newState.lastProjectNumber = newProjectNumber;
-    newState.projects.push({
-      code: newProjectCode,
-      number: newProjectNumber,
-      description: answers.description,
-      createdOn: new Date().toJSON()
-    });
+        // update state.json
+        console.log("Updating repository state...");
+        var newState = state;
+        newState.lastProjectNumber = newProjectNumber;
+        newState.projects.push({
+          code: newProjectCode,
+          number: newProjectNumber,
+          description: answers.description,
+          createdOn: new Date().toJSON()
+        });
 
-    // write state.json
-    writeFile(
-      path.join(__dirname, "../res/state.json"),
-      JSON.stringify(newState, null, 2)
-    );
+        // write state.json
+        writeFile(
+          path.join(__dirname, "../res/state.json"),
+          JSON.stringify(newState, null, 2)
+        );
 
-    // add reference in main README
-    console.log("Adding project reference in maini README...");
-    var affixes = "";
-    answers.affixes.forEach(affixe => {
-      affixes += services.affixesCode[affixe];
-    });
+        // add reference in main README
+        console.log("Adding project reference in maini README...");
+        var affixes = "";
+        answers.affixes.forEach(affixe => {
+          affixes += services.affixesCode[affixe];
+        });
 
-    var ref =
-      "| " +
-      "[" +
-      newProjectCode +
-      "](./" +
-      newProjectCode +
-      "/README.md)" +
-      " | " +
-      affixes +
-      " | " +
-      answers.title +
-      " |\n";
+        var ref =
+          "| " +
+          "[" +
+          newProjectCode +
+          "](./" +
+          newProjectCode +
+          "/README.md)" +
+          " | " +
+          affixes +
+          " | " +
+          answers.title +
+          " |\n";
 
-    fs.appendFileSync(state.rootDirectory + "/README.md", ref, {
-      encoding: "utf8"
-    });
+        fs.appendFileSync(state.rootDirectory + "/README.md", ref, {
+          encoding: "utf8"
+        });
 
-    // Start VSCode in the project directory and open README.md
-    console.log("Starting VS Code...");
+        // Start VSCode in the project directory and open README.md
+        console.log("Starting VS Code...");
 
-    console.log("Done!");
+        console.log("Done!");
+      })
+      .fail(err => console.log("Error:", err));
   });
 }
 
@@ -124,15 +134,4 @@ function writeFile(path, content) {
     mode: "777"
   });
   fs.closeSync(fd);
-}
-
-function initGitBranch(dir, mainBranch, projectName) {
-  var git = new GitCommandLine(dir);
-  git
-    .checkout(mainBranch)
-    .then(res => git.checkout(projectName))
-    .then(res => git.add("*"))
-    .then(res => git.commit('-am "Init ' + projectName + ' project"'))
-    .then(res => console.log("Success: ", res))
-    .fail(err => console.log("Error:", err));
 }
