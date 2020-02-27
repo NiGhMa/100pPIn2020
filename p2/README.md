@@ -6,6 +6,7 @@ This PowerShell script contains tools I like to use when developing. This projec
 
 - [x] Create my GitShell
 - [x] Create `touch` command
+- [x] Create `grep` command
 
 ## What I've learned so far
 
