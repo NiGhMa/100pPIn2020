@@ -33,6 +33,7 @@ function doTheJob() {
     // Init Git branch
     console.log("Creating git branch...");
     var git = new GitCommandLine(state.rootDirectory);
+
     git
       .checkout(GIT_BRANCH_MAIN)
       .then(res => git.checkout("-b " + newProjectCode))
@@ -107,11 +108,9 @@ function doTheJob() {
 
         console.log("Done!");
       })
+      .then(res => git.add("*"))
+      .then(res => git.commit('-am "Init ' + newProjectCode + ' project"'))
       .fail(err => console.log("Error:", err));
-
-    git
-      .add("*")
-      .then(res => git.commit('-am "Init ' + newProjectCode + ' project"'));
   });
 }
 
