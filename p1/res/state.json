@@ -1,5 +1,5 @@
 {
-  "lastProjectNumber": 2,
+  "lastProjectNumber": 3,
   "rootDirectory": "C:\\dev\\projects\\100PIn2020",
   "projects": [
     {
@@ -13,6 +13,12 @@
       "number": 2,
       "description": "PowerShell tools for lazy creators",
       "createdOn": "2020-02-23T05:00:00.000Z"
+    },
+    {
+      "code": "p3",
+      "number": 3,
+      "description": "In this project, I'll put the evolution of the useful plugins list I use and my setup configuration for VS Code.",
+      "createdOn": "2020-02-27T17:14:40.588Z"
     }
   ]
 }
