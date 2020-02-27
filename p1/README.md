@@ -28,10 +28,10 @@ After some questions, the tool will do the following:
 - [x] Make README and save it
 - [x] Update state file
 - [x] Add project's reference in main README
-- [ ] Start a new git branch
-- [ ] Commit first files
-- [ ] Start VSCode in the project directory and open README for change
-- [x] Add a shell script in the main root direectory
+- [x] Start a new git branch
+- [x] Commit first files
+- [x] Start VSCode in the project directory and open README for change
+- [x] Add a shell script in the main root directory
 
 ## Improvements
 
