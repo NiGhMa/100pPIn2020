@@ -84,7 +84,7 @@ function doTheJob() {
         );
 
         // add reference in main README
-        console.log("Adding project reference in maini README...");
+        console.log("Adding project reference in main README...");
         var affixes = "";
         answers.affixes.forEach(affixe => {
           affixes += services.affixesCode[affixe];
@@ -116,6 +116,11 @@ function doTheJob() {
       .then(() => git.commit('-am "Init ' + newProjectCode + ' project"'))
       .then(() => exec("cd " + newProjectPath))
       .then(() => exec("code . README.md"))
+      .then(() =>
+        console.log(
+          "\n*** Please push the project to the repo and create a pull request to update the project state.json ***\nhttps://github.com/NiGhMa/100PIn2020"
+        )
+      )
       .fail(err => console.log("Error:", err));
   });
 }
