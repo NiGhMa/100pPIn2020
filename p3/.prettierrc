@@ -1,0 +1,15 @@
+{
+  "printWidth": 100,
+  "tabWidth": 2,
+  "tabs": false,
+  "singleQuote": true,
+  "trailingComma": "none",
+  "endOfLine": "lf",
+  "bracketSpacing": true,
+  "jsxBracketSameLine": true,
+  "arrowParens": "avoid",
+  "semi": false,
+  "newline-before-return": true,
+  "no-duplicate-variable": [true, "check-parameters"],
+  "no-var-keyword": true
+}
