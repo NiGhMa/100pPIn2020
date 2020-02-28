@@ -1,5 +1,5 @@
 {
-  "lastProjectNumber": 3,
+  "lastProjectNumber": 4,
   "rootDirectory": "C:\\dev\\projects\\100PIn2020",
   "projects": [
     {
@@ -19,6 +19,12 @@
       "number": 3,
       "description": "In this project, I'll put the evolution of the useful plugins list I use and my setup configuration for VS Code.",
       "createdOn": "2020-02-27T17:14:40.588Z"
+    },
+    {
+      "code": "p4",
+      "number": 4,
+      "description": "We need a tool to be able to regenerate the `state.json` file if something goes wrong.",
+      "createdOn": "2020-02-28T01:58:11.558Z"
     }
   ]
 }
