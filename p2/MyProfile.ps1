@@ -1,6 +1,6 @@
 # PowerShell tools for lazy creators
 # author: NiGhMa
-# version: 0.0.1
+# version: 0.0.2
 
 # GIT prompt
 Import-Module posh-git
@@ -27,3 +27,9 @@ function createFile($fn) {
 
 Set-Alias -Name touch -Value createFile
 
+# grep command
+function findInOutput {
+  $input | out-string -stream | select-string -Pattern $args
+}
+
+Set-Alias -Name grep -Value findInOutput

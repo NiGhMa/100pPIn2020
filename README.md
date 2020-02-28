@@ -41,6 +41,8 @@ Next ideas are welcome 🙏
 - MongoDB
 - Spring-Boot
 - Spring
+- PDF generator
+- Create my own Github action
 
 ## Projects
 
