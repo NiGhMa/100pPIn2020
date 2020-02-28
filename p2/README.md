@@ -19,6 +19,10 @@ This PowerShell script contains tools I like to use when developing. This projec
 
 🦄 none unicorn helps me for this so far
 
+## Infos
+
+Started on: 2020-02-23T05:00:00.000Z
+
 ## Troubleshooting
 
 ### Git commands to remote server still ask for passphrase

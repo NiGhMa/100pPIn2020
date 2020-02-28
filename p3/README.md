@@ -24,3 +24,7 @@ In this project, I'll put the evolution of the useful plugins list I use and my 
 Thanks to them for the inspiration and references!
 
 🦓 I do/did it by my own this time!
+
+## Infos
+
+Started on: 2020-02-27T17:14:40.588Z

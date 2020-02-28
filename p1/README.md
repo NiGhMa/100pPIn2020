@@ -54,3 +54,7 @@ After some questions, the tool will do the following:
 Thanks to them for the inspiration and references!
 
 🦄 [Coding Garden with CJ](https://github.com/CodingGarden)
+
+## Infos
+
+Started on: 2020-02-21T05:00:00.000Z
