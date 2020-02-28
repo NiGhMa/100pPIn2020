@@ -5,11 +5,11 @@ We need a tool to be able to regenerate the `state.json` file if something goes 
 ## Plan
 
 - [x] Create script to generate the `state.json` file
-  - [ ] Get directories list (project codes)
-  - [ ] Retrieve project number from project code
-  - [ ] Retrieve the title from README files
-  - [ ] Retrieve the description from README files
-  - [ ] Retrieve the date when README file has been created (project start date)
+  - [x] Get directories list (project codes)
+  - [x] Retrieve project number from project code
+  - [x] Retrieve the title from README files
+  - [x] Retrieve the description from README files
+  - [x] Retrieve the date when README file has been created (project start date)
 - [x] Add the script in the root directory
 
 ## Improvements
@@ -25,3 +25,7 @@ _No idea yet but that will come for sure_
 Thanks to them for the inspiration and references!
 
 🦓 I do/did it by my own this time!
+
+## Infos
+
+Started on: 2020-02-28T01:58:11.558Z

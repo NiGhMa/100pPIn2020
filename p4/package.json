@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "We need a tool to be able to regenerate the `state.json` file if something goes wrong.",
   "main": "src/index.js",
+  "scripts": {
+    "start": "node -r esm src/index.js"
+  },
   "keywords": [],
   "author": "NiGhMa <nighma@gmail.com> (http://github.com/NiGhMa)",
   "license": "MIT",
