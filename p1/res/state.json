@@ -5,24 +5,28 @@
     {
       "code": "p1",
       "number": 1,
+      "title": "An interactive CLI made with NodeJS and Inquirer",
       "description": "An interactive CLI made with NodeJS and Inquirer",
       "createdOn": "2020-02-21T05:00:00.000Z"
     },
     {
       "code": "p2",
       "number": 2,
+      "title": "PowerShell tools for lazy creators",
       "description": "PowerShell tools for lazy creators",
       "createdOn": "2020-02-23T05:00:00.000Z"
     },
     {
       "code": "p3",
       "number": 3,
+      "title": "My VS Code plugins and config",
       "description": "In this project, I'll put the evolution of the useful plugins list I use and my setup configuration for VS Code.",
       "createdOn": "2020-02-27T17:14:40.588Z"
     },
     {
       "code": "p4",
       "number": 4,
+      "title": "Regenerate state.json for p1",
       "description": "We need a tool to be able to regenerate the `state.json` file if something goes wrong.",
       "createdOn": "2020-02-28T01:58:11.558Z"
     }
