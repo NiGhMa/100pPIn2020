@@ -73,6 +73,7 @@ function doTheJob() {
         newState.projects.push({
           code: newProjectCode,
           number: newProjectNumber,
+          title: answers.title,
           description: answers.description,
           createdOn: new Date().toJSON()
         });
