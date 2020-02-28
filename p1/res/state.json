@@ -6,14 +6,14 @@
       "code": "p1",
       "number": 1,
       "title": "An interactive CLI made with NodeJS and Inquirer",
-      "description": "An interactive CLI made with NodeJS and Inquirer",
+      "description": "This is a simple interactive CLI example made with NodeJS and Inquirer.\nIn this example I created it to init my project directory.\nAfter some questions, the tool will do the following:\n1. creates the project directory with the next number\n2. creates the README file from a template (like this one)\n3. adds the reference line in the main README file\n4. creates a new git branch\n5. commits first files\n6. opens VSCode and open the README file for change",
       "createdOn": "2020-02-21T05:00:00.000Z"
     },
     {
       "code": "p2",
       "number": 2,
       "title": "PowerShell tools for lazy creators",
-      "description": "PowerShell tools for lazy creators",
+      "description": "This PowerShell script contains tools I like to use when developing. This project will growth as I'll find new useful commands and tips to add.",
       "createdOn": "2020-02-23T05:00:00.000Z"
     },
     {
