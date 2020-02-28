@@ -43,6 +43,7 @@ Next ideas are welcome 🙏
 - Spring
 - PDF generator
 - Create my own Github action
+- ...
 
 ## Projects
 
