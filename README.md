@@ -51,4 +51,4 @@ Next ideas are welcome 🙏
 | :------------------: | :-----: | :----------------------------------------------- |
 | [p1](./p1/README.md) |   📺    | An interactive CLI made with NodeJS and Inquirer |
 | [p2](./p2/README.md) |    🛠    | PowerShell tools for lazy creators               |
-| [p3](./p3/README.md) |    🛠    | My VS Code plugins and config                    |
+| [p3](./p3/README.md) |   🛠⏳   | My VS Code plugins and config                    |

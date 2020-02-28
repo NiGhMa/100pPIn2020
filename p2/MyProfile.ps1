@@ -1,6 +1,6 @@
 # PowerShell tools for lazy creators
 # author: NiGhMa
-# version: 0.0.2
+# version: 0.0.3
 
 # GIT prompt
 Import-Module posh-git
@@ -19,6 +19,10 @@ function prompt {
   
   "> "
 }
+
+# SSH commands - Git for Windows should be installed!
+$env:path += ";" + (Get-Item "Env:ProgramFiles").Value + "\Git\usr\bin"
+Start-SshAgent -Quiet
 
 # touch command
 function createFile($fn) {
