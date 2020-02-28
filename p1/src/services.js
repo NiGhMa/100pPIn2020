@@ -25,7 +25,7 @@ function askDetails() {
       type: "input",
       name: "title",
       message: "What's the title?",
-      default: "My best project"
+      default: "The new TODO list App"
     },
     {
       type: "input",
