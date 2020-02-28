@@ -4,13 +4,13 @@ We need a tool to be able to regenerate the `state.json` file if something goes 
 
 ## Plan
 
-- [ ] Create script to generate the `state.json` file
-- [ ] Get directories list (project codes)
-- [ ] Retrieve project number from project code
-- [ ] Retrieve the title from README files
-- [ ] Retrieve the description from README files
-- [ ] Retrieve the date when README file has been created (project start date)
-- [ ] Add the script in the root directory
+- [x] Create script to generate the `state.json` file
+  - [ ] Get directories list (project codes)
+  - [ ] Retrieve project number from project code
+  - [ ] Retrieve the title from README files
+  - [ ] Retrieve the description from README files
+  - [ ] Retrieve the date when README file has been created (project start date)
+- [x] Add the script in the root directory
 
 ## Improvements
 
@@ -18,7 +18,7 @@ _No idea yet but that will come for sure_
 
 ## What I've learned so far
 
-✔ ...
+✔ How to retrieve the creation date of a file
 
 ## Unicorns
 
