@@ -4,16 +4,18 @@ This is a simple boilerplate to use for a Typescript multi-packages project. ESL
 
 ## Plan
 
-- [ ] Prepare packages
-- [ ] Init typescript project
-- [ ] Init ESLint
-- [ ] Configure ESLint
-- [ ] Configure Prettier
-- [ ] Configure TSconfig
+- [x] Prepare packages directories
+- [x] Install `lerna`
+- [x] Install `typescript`
+- [x] Install `eslint`
+- [x] Run `gitignore node`
+- [x] Configure tsconfig for monorepo
+- [x] Add Jest + config
+- [x] Prettier + eslint config
 
 ## Improvements
 
-_No idea yet but that will come for sure_
+No idea yet but that will come for sure
 
 ## What I've learned so far
 

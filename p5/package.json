@@ -1,0 +1,30 @@
+{
+  "name": "p5",
+  "version": "1.0.0",
+  "description": "This is a simple boilerplate to use for a Typescript multi-packages project. ESLint, TS, ... all configurations are inside.",
+  "main": "index.js",
+  "scripts": {
+    "build": "lerna run build",
+    "lint": "lerna run lint"
+  },
+  "keywords": [],
+  "author": "NiGhMa <nighma@gmail.com> (http://github.com/NiGhMa)",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@types/jest": "^25.1.3",
+    "@typescript-eslint/eslint-plugin": "^2.21.0",
+    "@typescript-eslint/parser": "^2.21.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-typescript": "^7.0.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jest": "^23.8.1",
+    "jest": "^25.1.0",
+    "lerna": "^3.20.2",
+    "ts-jest": "^25.2.1"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "@my-project-boilerplate/app",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^13.7.7",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@my-project-boilerplate/server": "1.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/index.ts",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx"
+  }
+}
