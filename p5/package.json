@@ -4,10 +4,16 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "lerna run build",
-    "lint": "lerna run lint",
-    "test": "lerna run test",
-    "coverage": "lerna run coverage"
+    "build": "lerna run build --stream",
+    "lint": "lerna run lint --stream",
+    "test": "lerna run test --concurrency=1 --stream",
+    "coverage": "lerna run coverage --stream",
+    "clean": "yarn clean:artifacts && yarn clean:packages && yarn clean:root && yarn clean:dist && yarn clean:coverage",
+    "clean:artifacts": "lerna run clean --parallel",
+    "clean:packages": "lerna clean --yes",
+    "clean:root": "rimraf node_modules",
+    "clean:dist": "rimraf **/dist",
+    "clean:coverage": "rimraf **/coverage"
   },
   "devDependencies": {
     "@types/jest": "^25.1.3",
