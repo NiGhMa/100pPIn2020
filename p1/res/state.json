@@ -1,5 +1,5 @@
 {
-  "lastProjectNumber": 4,
+  "lastProjectNumber": 5,
   "rootDirectory": "C:\\dev\\projects\\100PIn2020",
   "projects": [
     {
@@ -29,6 +29,13 @@
       "title": "Regenerate state.json for p1",
       "description": "We need a tool to be able to regenerate the `state.json` file if something goes wrong.",
       "createdOn": "2020-02-28T01:58:11.558Z"
+    },
+    {
+      "code": "p5",
+      "number": 5,
+      "title": "Typescript boilerplate",
+      "description": "This is a simple boilerplate to use for a Typescript multi-packages project. ESLint, TS, ... all configurations are inside.",
+      "createdOn": "2020-03-01T22:40:40.230Z"
     }
   ]
 }
