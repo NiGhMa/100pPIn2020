@@ -12,6 +12,8 @@
   "scripts": {
     "start": "ts-node src/index.ts",
     "build": "tsc",
-    "lint": "eslint . --ext .ts,.tsx,.js,.jsx"
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "test": "jest",
+    "coverage": "jest --coverage --colors"
   }
 }

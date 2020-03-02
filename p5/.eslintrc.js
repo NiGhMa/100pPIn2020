@@ -17,6 +17,10 @@ module.exports = {
     project: ['./tsconfig.json', './packages/*/tsconfig.json']
   },
   plugins: ['@typescript-eslint', 'jest'],
+  env: {
+    node: true,
+    'jest/globals': true
+  },
   rules: {
     'no-shadow': 'warn',
     '@typescript-eslint/explicit-member-accessibility': 'off',
